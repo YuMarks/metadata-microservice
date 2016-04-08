@@ -1,6 +1,5 @@
 var express = require('express'),
   app = express(),
-  http = require('http'),
   fs = require('fs'),
   path = require('path'),
   multer = require('multer'),
@@ -21,7 +20,8 @@ app.post('/formHandler', upload.single('myFile'),
     if (req.file == undefined) {
       res.write("<script type = 'application/javascript'>alert('No file uploaded')</script>" + "<p><form method= 'POST' enctype='multipart/form-data' action='/formHandler'><input type='file' name='myFile'><input type='submit' name='submit' value= 'Upload'></form> </p>");
       res.end();
-    }
+      return;
+    }else{
     fileName = req.file.filename;
     filePath = path.join(__dirname + '/uploads/' + fileName);
     fs.unlinkSync(filePath);
@@ -30,6 +30,7 @@ app.post('/formHandler', upload.single('myFile'),
     var alertText = "<script type = 'application/javascript'>alert(" + '"' + phrase + '"' + " );</script>";
     res.write(alertText + "<p><form method= 'POST' enctype='multipart/form-data' action='/formHandler'><input type='file' name='myFile'><input type='submit' name='submit' value= 'Upload'></form> </p>");
     res.end();
+    }
   });
 
 app.listen(port);

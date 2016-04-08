@@ -1,34 +1,31 @@
 {
-  "name": "clementinejs-fcc",
-  "version": "1.0.1",
-  "description": "The elegant and lightweight boilerplate for full stack JavaScript.",
-  "main": "server.js",
+  "name": "File Metadata Microservice",
+  "version": "1.0.2",
+  "description": "Free Code Camp Project File Metadata Microservice.",
+  "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnstonbl01/clementinejs-fcc"
+    "url": "git+https://github.com/YuMarks/metadata-microservice"
   },
-  "homepage": "http://www.clementinejs.com/",
-  "bugs": "https://github.com/johnstonbl01/clementinejs-fcc/issues",
+  "homepage": "https://file-metadata-microservice-ymarks.c9users.io",
+  "bugs": "https://github.com/YuMarks/metadata-microservice/issues",
   "keywords": [
-    "MongoDB",
-    "Mongoose",
-    "full stack",
     "Express",
     "Node",
     "javascript",
-    "boilerplate"
+    "upload",
+    "file size"
   ],
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "author": "Y Marks",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "http": "0.0.0",
+    "fs": "0.0.2",
     "multer": "^1.1.0",
-    "path": "^0.12.7",
-    "util": "^0.10.3"
+    "path": "^0.12.7"
   }
 }
